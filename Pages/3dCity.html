@@ -126,7 +126,9 @@
         font-family: 'Anek', sans-serif;
         text-align: center;
         font-size: 19px;
-        color: black;
+        background-color: #121316;
+        color: white;
+        outline-color: white;
         display: inline-block;
         bottom: 0px;
         padding: 15px 32px;
@@ -136,11 +138,13 @@
     .endfullscreenbutton {
         font-family: 'Anek', sans-serif;
         text-align: center;
-        font-size: 19px;
-        color: black;
-        bottom: 0px;
-        left: 0px;
-        padding: 15px 32px;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0,0.4);
+        color:  rgba(255, 255, 255,0.9);
+        outline-color: rgba(0, 0, 0,0.6);
+        bottom: 5px;
+        left: 5px;
+        padding: 4px 8px;
         position: absolute;
     }
 
@@ -158,7 +162,7 @@
 </div>
 
 <div class="SideBar" id="Sidebar">
-    <h3> <a href="../Index.html">COOL STUFF 2.0</a> </h3>
+    <h3> <a href="../index.html">COOL STUFF 2.0</a> </h3>
     <a href="#">3D. City</a>
     <a href="Pages/Slope.html">Slope</a>
 </div>
@@ -184,8 +188,20 @@
             Sidebar.style.backgroundColor = "#1e1f24";
             Sidebar.style.outlineColor = "black";
 
+            var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "black";
+            Stylebutton.style.color = "black";
+            Stylebutton.style.backgroundColor = "#d9d9d9";
+
+            var Stylebutton = document.getElementById("FullButton")
+            Stylebutton.style.outlineColor = "black";
+            Stylebutton.style.color = "black";
+            Stylebutton.style.backgroundColor = "#d9d9d9";
+
             document.getElementById("ChangeStyle").textContent = "Dark Mode";
         } else if (CurrentStyle == 2) {
+            window.location.hash='dark';
+            
             CurrentStyle = 1;
             document.getElementById("body").style.backgroundColor = "#1e1f24";
 
@@ -199,6 +215,16 @@
             var Sidebar = document.getElementById("Sidebar")
             Sidebar.style.backgroundColor = "black";
             Sidebar.style.outlineColor = "white";
+
+            var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "white";
+            Stylebutton.style.color = "white";
+            Stylebutton.style.backgroundColor = "#121316";
+
+            var Stylebutton = document.getElementById("FullButton")
+            Stylebutton.style.outlineColor = "white";
+            Stylebutton.style.color = "white";
+            Stylebutton.style.backgroundColor = "#121316";
 
             document.getElementById("ChangeStyle").textContent = "Light Mode";
         }
