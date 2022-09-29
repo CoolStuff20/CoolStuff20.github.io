@@ -4,6 +4,7 @@
 <link rel="icon" href="Favicon.png">
 <body id="body">
 </body>
+
 <style>
     @font-face {
         font-family: 'Roboto';
@@ -124,6 +125,8 @@
     }
 </style>
 
+<script src="https://unpkg.com/htmlincludejs"></script>
+
 <div class="MainSide" id="MainSection">
     <header id="header"> Cool Stuff 2.0 </header>
     <h1 id="h1"> <span> GAMES </span> for bored <span> STUDENTS </span> </h1>
@@ -137,11 +140,8 @@
 </div>
 
 <div class="SideBar" id="Sidebar">
-    <h3> <a href="#">COOL STUFF 2.0</a> </h3>
-    <a href="Pages/3dCity.html">3D. City</a>
-    <a href="Pages/Slope.html">Slope</a>
+    <include src="./List.html"></include>
 </div>
-
 
 <script>
     var CurrentStyle = 1;
