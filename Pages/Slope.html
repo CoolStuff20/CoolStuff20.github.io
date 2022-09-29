@@ -113,15 +113,35 @@
         padding: 20px 20px;
     }
 
-    button {
+    .button {
         font-family: 'Anek', sans-serif;
         text-align: center;
         font-size: 19px;
-        color: black;
+        background-color: #121316;
+        color: white;
+        outline-color: white;
         display: inline-block;
         bottom: 0px;
         padding: 15px 32px;
 
+    }
+    .endfullscreenbutton {
+        font-family: 'Anek', sans-serif;
+        text-align: center;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0,0.4);
+        color:  rgba(255, 255, 255,0.9);
+        outline-color: rgba(0, 0, 0,0.6);
+        bottom: 5px;
+        left: 5px;
+        padding: 4px 8px;
+        position: absolute;
+    }
+
+    .AdPlaceholder {
+        padding-top: 30px;
+        display: none;
+        text-align: center;
     }
 </style>
 
@@ -131,9 +151,14 @@
     <header id="header"> Cool Stuff 2.0 </header>
     <h1 id="h1"> Slope </h1>
     <div class="BottomSection">
-        <iframe class="Game" src="https://bigfoot9999.github.io/Slope-Game/" height="90%" width="80%" frameborder="0"></iframe>
-        <button id="ChangeStyle" type="button" onclick="ChangeStyleMode()"> Light Mode </button>
-    </div>
+        <iframe allowfullscreen class="Game" src="https://bigfoot9999.github.io/Slope-Game/" height="90%" width="80%" frameborder="0"></iframe>
+        <button id="FullButton" type="button" class="button" onclick="Fullscreen()"> Fullscreen </button>
+        <button id="EndFullButton" class="endfullscreenbutton" type="button" onclick="EndFullscreen()"> End Fullscreen </button>
+        <button id="ChangeStyle" type="button" class="button" onclick="ChangeStyleMode()"> Light Mode </button>
+        <div class='AdPlaceholder'>
+            <img src="../Icons/BannerAdP.png">
+        </div>
+     </div>
 </div>
 
 <div class="SideBar" id="Sidebar">
@@ -143,6 +168,8 @@
 
 <script>
     var CurrentStyle = 1;
+    var EndfullscreenButton = document.getElementById("EndFullButton")
+    EndfullscreenButton.style.display = "none";
     function ChangeStyleMode() {
         if (CurrentStyle == 1) {
             CurrentStyle = 2;
@@ -159,8 +186,20 @@
             Sidebar.style.backgroundColor = "#1e1f24";
             Sidebar.style.outlineColor = "black";
 
+            var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "black";
+            Stylebutton.style.color = "black";
+            Stylebutton.style.backgroundColor = "#d9d9d9";
+
+            var Stylebutton = document.getElementById("FullButton")
+            Stylebutton.style.outlineColor = "black";
+            Stylebutton.style.color = "black";
+            Stylebutton.style.backgroundColor = "#d9d9d9";
+
             document.getElementById("ChangeStyle").textContent = "Dark Mode";
         } else if (CurrentStyle == 2) {
+            window.location.hash='dark';
+            
             CurrentStyle = 1;
             document.getElementById("body").style.backgroundColor = "#1e1f24";
 
@@ -175,7 +214,34 @@
             Sidebar.style.backgroundColor = "black";
             Sidebar.style.outlineColor = "white";
 
+            var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "white";
+            Stylebutton.style.color = "white";
+            Stylebutton.style.backgroundColor = "#121316";
+
+            var Stylebutton = document.getElementById("FullButton")
+            Stylebutton.style.outlineColor = "white";
+            Stylebutton.style.color = "white";
+            Stylebutton.style.backgroundColor = "#121316";
+
             document.getElementById("ChangeStyle").textContent = "Light Mode";
         }
     }
+    var Sidebar = document.getElementById("Sidebar")
+
+    function Fullscreen() {
+        var EndfullscreenButton = document.getElementById("EndFullButton")
+        EndfullscreenButton.style.display = "none";
+        document.getElementsByTagName("iframe")[0].className = "fullScreen";
+        Sidebar.style.display = "none";
+        EndfullscreenButton.style.display = "inline-block";
+    }
+    function EndFullscreen() {
+        var EndfullscreenButton = document.getElementById("EndFullButton")
+        EndfullscreenButton.style.display = "none";
+        document.getElementsByTagName("iframe")[0].className = "Game";
+        Sidebar.style.display = "block";
+        EndfullscreenButton.style.display = "none";
+    }
+
 </script>

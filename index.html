@@ -113,15 +113,35 @@
         padding: 20px 20px;
     }
 
-    button {
+    .button {
         font-family: 'Anek', sans-serif;
         text-align: center;
         font-size: 19px;
-        color: black;
+        background-color: #121316;
+        color: white;
+        outline-color: white;
         display: inline-block;
         bottom: 0px;
         padding: 15px 32px;
 
+    }
+    .endfullscreenbutton {
+        font-family: 'Anek', sans-serif;
+        text-align: center;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0,0.4);
+        color:  rgba(255, 255, 255,0.9);
+        outline-color: rgba(0, 0, 0,0.6);
+        bottom: 5px;
+        left: 5px;
+        padding: 4px 8px;
+        position: absolute;
+    }
+
+    .AdPlaceholder {
+        padding-top: 30px;
+        display: none;
+        text-align: center;
     }
 </style>
 
@@ -135,7 +155,10 @@
     </div>
     <div class="BottomSection">
         <iframe class="Weather" width="600" height="400" src="https://embed.windy.com/embed2.html?lat=47.361&lon=-101.436&detailLat=43.850&detailLon=-79.513&width=650&height=450&zoom=3&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-        <button id="ChangeStyle" type="button" onclick="ChangeStyleMode()"> Light Mode </button>
+        <button id="ChangeStyle" type="button" class="button" onclick="ChangeStyleMode()"> Light Mode </button>
+        <div class='AdPlaceholder'>
+            <img src="Icons/BannerAdP.png">
+        </div>
     </div>
 </div>
 
@@ -157,18 +180,19 @@
 
             document.getElementById("h1").style.color = "black";
 
-            document.getElementById("h2").style.color = "black";
-
-            var Div = document.getElementById("BoardDiv")
-            Div.style.outlineColor = "black";
-            Div.style.backgroundColor = "white";
-
             var Sidebar = document.getElementById("Sidebar")
             Sidebar.style.backgroundColor = "#1e1f24";
             Sidebar.style.outlineColor = "black";
 
+            var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "black";
+            Stylebutton.style.color = "black";
+            Stylebutton.style.backgroundColor = "#d9d9d9";
+
             document.getElementById("ChangeStyle").textContent = "Dark Mode";
         } else if (CurrentStyle == 2) {
+            window.location.hash='dark';
+            
             CurrentStyle = 1;
             document.getElementById("body").style.backgroundColor = "#1e1f24";
 
@@ -179,15 +203,14 @@
 
             document.getElementById("h1").style.color = "white";
 
-            document.getElementById("h2").style.color = "white";
-
-            var Div = document.getElementById("BoardDiv")
-            Div.style.outlineColor = "white";
-            Div.style.backgroundColor = "#1e1f24";
-
             var Sidebar = document.getElementById("Sidebar")
             Sidebar.style.backgroundColor = "black";
             Sidebar.style.outlineColor = "white";
+
+            var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "white";
+            Stylebutton.style.color = "white";
+            Stylebutton.style.backgroundColor = "#121316";
 
             document.getElementById("ChangeStyle").textContent = "Light Mode";
         }
