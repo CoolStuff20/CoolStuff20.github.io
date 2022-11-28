@@ -1,5 +1,5 @@
-# pixi-minesweeper
+minesweeper
+===========
+Clone of Microsoft's Minesweeper from Windows XP. An effort was made to duplicate every feature (excluding menus) as exactly as possible.
 
-Classic Minesweeper created with PixiJS.
-
-[Play the game](https://minesweeper.page)
+Demo: https://ziebelje.github.io/minesweeper/
