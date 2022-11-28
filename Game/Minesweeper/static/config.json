@@ -1,0 +1,17 @@
+{
+	"colorBackground": "#303030",
+	"colorBoard": "#bda355",
+	"numberFont": "Arial",
+	"numberSize": 21,
+	"colorNumberWeight": "bold",
+	"colorNumbers": {
+		"1": "#4b6f9c",
+		"2": "#5c9c49",
+		"3": "#995848",
+		"4": "#544896",
+		"5": "#964872",
+		"6": "#469183",
+		"7": "#818a6a",
+		"8": "#51524f"
+	}
+}
