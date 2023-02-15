@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>DooM</title>
+
+    <style>
+      #output {
+        border: 3px groove aquamarine;
+        background-color: bisque;
+        width: 550px;
+        height: 400px;
+        font-family: monospace, serif;
+        font-size: 10px;
+        overflow-y: scroll;
+      }
+      #output span.log {
+        color:darkslateblue;
+      }
+      #output span.stdout {
+        color: black;
+      }
+      #output span.stderr {
+        font-weight: bold;
+        color:brown;
+      }
+
+      .container {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="focushint"></p>
+    <div class="container">
+      <canvas id="screen" width=100% height=100% tabindex="0">This is where the DooM screen should render.</canvas>
+      <span>&nbsp;</span>
+      <div id="output"></div>
+    </div>
+    gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br>
+    DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
+    Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
+
+    <script src="main.js" defer></script>
+  </body>
+
+</html>
