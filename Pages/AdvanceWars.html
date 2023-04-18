@@ -1,24 +1,23 @@
 <title>
     Cool Stuff
 </title>
-<link rel="icon" href="Favicon.png">
+<link rel="icon" href="../Favicon.png">
 <body id="body">
 </body>
-
 <style>
     @font-face {
         font-family: 'Roboto';
-        src: url("Fonts/Roboto1.ttf");
+        src: url("../Fonts/Roboto1.ttf");
     }
 
     @font-face {
         font-family: 'Stroke';
-        src: url("Fonts/Stroke.ttf");
+        src: url("../Fonts/Stroke.ttf");
     }
 
     @font-face {
         font-family: 'Anek';
-        src: url("Fonts/AnekMain.ttf");
+        src: url("../Fonts/AnekMain.ttf");
     }
 
     header {
@@ -49,11 +48,12 @@
         font-size: 20px;
         color: white;
     }
-
+    
     body {
         background-color: #1e1f24;
-        padding: 20px 30px;
-    }
+        height: 100%;
+         margin: 0;
+}
 
     span {
         font-size: 1.2em;
@@ -71,6 +71,14 @@
         padding-bottom: 30px;
     }
 
+    .fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+    
     .MainSide {
         margin-left: 200px;
     }
@@ -98,7 +106,7 @@
             display: block;
         }
 
-    .Weather {
+    .Game {
         padding: 20px 20px;
         text-align: center;
         align-self: center;
@@ -107,6 +115,7 @@
         bottom: 10px;
         display: block;
         margin: 0 auto;
+        outline: none;
     }
 
     .BottomSection {
@@ -149,29 +158,27 @@
 
 <div class="MainSide" id="MainSection">
     <header id="header"> Cool Stuff 2.0 </header>
-    <h1 id="h1"> <span> GAMES </span> for bored <span> STUDENTS </span> </h1>
-    <div id="BoardDiv" class="BoardDiv">
-        <h1 id="h1"> UPDATE BOARD </h1>
-        <h2 id="h2"> MAJOR UPDATE: 6 GBA games and 1 NDS games Added (2023-4-18) 2.1</h2>
-        <h2 id="h2"> Chess and Duck Life Added (2023-2-16) 2.0.3 </h2>
-        <h2 id="h2"> POOM Added (2023-2-15) 2.0.2</h2>
-        <h2 id="h2"> Doodle Jump Added (2022-12-05) 2.0.1 </h2>
-    </div>
+    <h1 id="h1"> Advance Wars </h1>
     <div class="BottomSection">
-        <iframe class="Weather" width="600" height="400" src="https://embed.windy.com/embed2.html?lat=47.361&lon=-101.436&detailLat=43.850&detailLon=-79.513&width=650&height=450&zoom=3&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+        <iframe allowfullscreen class="Game" src="https://cattn.github.io/gba/launcher.html#advancewars"height="90%" width="80%" frameborder="0"></iframe>
+        <button id="FullButton" type="button" class="button" onclick="Fullscreen()"> Fullscreen </button>
+        <button id="EndFullButton" class="endfullscreenbutton" type="button" onclick="EndFullscreen()"> End Fullscreen </button>
         <button id="ChangeStyle" type="button" class="button" onclick="ChangeStyleMode()"> Light Mode </button>
         <div class='AdPlaceholder'>
-            <img src="Icons/BannerAdP.png">
+            <img src="../Icons/BannerAdP.png">
         </div>
-    </div>
+     </div>
 </div>
 
 <div class="SideBar" id="Sidebar">
-    <include src="./List.html"></include>
+    <include src="../List2.html"></include>
 </div>
+
 
 <script>
     var CurrentStyle = 1;
+    var EndfullscreenButton = document.getElementById("EndFullButton")
+    EndfullscreenButton.style.display = "none";
     function ChangeStyleMode() {
         if (CurrentStyle == 1) {
             CurrentStyle = 2;
@@ -189,6 +196,11 @@
             Sidebar.style.outlineColor = "black";
 
             var Stylebutton = document.getElementById("ChangeStyle")
+            Stylebutton.style.outlineColor = "black";
+            Stylebutton.style.color = "black";
+            Stylebutton.style.backgroundColor = "#d9d9d9";
+
+            var Stylebutton = document.getElementById("FullButton")
             Stylebutton.style.outlineColor = "black";
             Stylebutton.style.color = "black";
             Stylebutton.style.backgroundColor = "#d9d9d9";
@@ -216,7 +228,29 @@
             Stylebutton.style.color = "white";
             Stylebutton.style.backgroundColor = "#121316";
 
+            var Stylebutton = document.getElementById("FullButton")
+            Stylebutton.style.outlineColor = "white";
+            Stylebutton.style.color = "white";
+            Stylebutton.style.backgroundColor = "#121316";
+
             document.getElementById("ChangeStyle").textContent = "Light Mode";
         }
     }
+    var Sidebar = document.getElementById("Sidebar")
+
+    function Fullscreen() {
+        var EndfullscreenButton = document.getElementById("EndFullButton")
+        EndfullscreenButton.style.display = "none";
+        document.getElementsByTagName("iframe")[0].className = "fullScreen";
+        Sidebar.style.display = "none";
+        EndfullscreenButton.style.display = "inline-block";
+    }
+    function EndFullscreen() {
+        var EndfullscreenButton = document.getElementById("EndFullButton")
+        EndfullscreenButton.style.display = "none";
+        document.getElementsByTagName("iframe")[0].className = "Game";
+        Sidebar.style.display = "block";
+        EndfullscreenButton.style.display = "none";
+    }
+
 </script>
