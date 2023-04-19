@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script async src="https://arc.io/widget.min.js#C5tJKq6m"></script>
+        <link rel="stylesheet" href = user_css/popup.css>
+        <title>EmulatorJS</title>
+        <link rel = icon href = docs/favicon.ico sizes = "16x16 32x32 48x48 64x64" type = image/vnd.microsoft.icon>
+        <meta name = viewport content = "width = device-width, initial-scale = 1">
+        <meta name="description" content= """>
+        <link rel = stylesheet href = user_css/player.css>
+<!-- Google tag (gtag.js) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5358301512554034"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62N8610D2L"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-62N8610D2L');
+  </script>
+
+  
+        <style>
+            body, html {
+                height: 100%;
+            }
+
+            body {
+                font-family: monospace;
+                font-weight: bold;
+                font-size: 20px;
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="gameplayer-2">
+            <div id='game'></div>
+        </div>
+        
+    <script src="data/js/loadgame/loadGbagame.js"></script>
+    <script src="data/js/loadgame/loadGbgame.js"></script>
+    <script src="data/js/loadgame/loadGbcgame.js"></script>
+    <script src="data/js/loadgame/loadAtari52game.js"></script>
+    <script src="data/js/loadgame/loadN64game.js"></script>
+    <script src="data/js/loadgame/loadNdsgame.js"></script>
+    <script src="data/js/loadgame/loadNesgame.js"></script>
+    <script src="data/js/loadgame/loadPsxgame.js"></script>
+    <script src="data/js/loadgame/loadSnesgame.js"></script>
+    <script src="data/js/loadgame/loadSegaMDgame.js"></script>
+    <script src="data/js/type.js"></script>
+    <script src="data/js/loadtype.js"></script>
+    <script src="data/js/swap.js"></script>
+        <script type='text/javascript'>
+        
+            EJS_player = '#game';
+            EJS_core = gameCoreType;
+        
+            // URL to Bios file
+        
+            EJS_biosUrl = gameName;
+            
+            // URL to Game rom
+             
+            EJS_gameUrl = gameName;
+            
+            /*
+             *  Path to the WASM / JS files
+             *  HAS TO BE in the same directory.
+             */
+            EJS_gameID = gameTypeID;
+            EJS_oldCores = doOldCores;
+            EJS_DEBUG_XX = true;
+            EJS_pathtodata = 'data/';
+            EJS_netplayUrl = "https://56022252-0447-4941-90a5-f79b0cdbaabb.id.repl.co:/";
+            
+        </script>
+        <script src='data/loader.js'></script>
+
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="center-row">
+    <p>All chromeOS users on our website, please fill out this one question survey, takes like 20 seconds, and helps us unblock things! Filling it out will hide this message permanently.</p>
+    </div>
+    <div class="space-frame"></div>
+    <div class="button-row"><a class="bottom-buttons button-frame frame-three" href="https://hardwaresurvery.i10.repl.co/" onclick="dontShowAgain();">Main Survey Link</a> <a class="bottom-buttons button-frame frame-three" onclick="dontShowAgain();" href="https://hard.pablobingle.me/">Backup Link</a></div>
+  </div>
+
+</div>
+
+<div id="myModal1" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="center-row">
+      </div>
+      <div class="space-frame"></div>
+      <div class="button-row"><a class="bottom-buttons button-frame frame-three" href="#" onclick="dontShowAgain();">Acknowledge This</a></div>
+    </div>
+  
+  </div>
+    </body>
+    <script src="user_scripts/player-theme.js"></script>
+    <script src="user_scripts/popup.js"></script>
+    </html>

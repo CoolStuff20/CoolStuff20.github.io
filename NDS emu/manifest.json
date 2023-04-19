@@ -1,0 +1,135 @@
+{
+"name": "MSG Retro Emulator",
+"short_name": "MSG Emulator",
+"start_url": "./",
+"display": "standalone",
+"description": "An emulator provided by the folks at MSG! We have a wide variety of retro games for you to enjoy, with more being added regularly!",
+"lang": "en-US",
+"dir": "auto",
+"theme_color": "#c8c8c8",
+"background_color": "#c8c8c8",
+"orientation": "any",
+"icons": [
+    {
+        "src": "pwa/manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "pwa/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "pwa/home.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    },
+    {
+        "src": "pwa/advancewars.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of a game"
+    },
+    {
+        "src": "pwa/favi.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of a favorites list"
+    },
+    {
+        "src": "pwa/testlaunch.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of the Custom ROM Loader"
+    },
+    {
+        "src": "pwa/old-emu.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of the old GBA emulator"
+    },
+    {
+        "src": "pwa/themes.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of the themes page"
+    },
+    {
+        "src": "pwa/green-home.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of the home page in green"
+    },
+    {
+        "src": "pwa/green-favi.png",
+        "sizes": "2559x1440",
+        "type": "image/png",
+        "description": "A screenshot of a favorites list in green"
+    }
+],
+"related_applications": [],
+"shortcuts": [
+    {
+        "name":"GBA Emulator",
+        "url":"gba.html",
+        "description":"Our GBA games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"GB Emulator",
+        "url":"gb.html",
+        "description":"Our GB games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"GBC Emulator",
+        "url":"gbc.html",
+        "description":"Our GBC games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"NES Emulator",
+        "url":"nes.html",
+        "description":"Our NES games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"SNES Emulator",
+        "url":"snes.html",
+        "description":"Our SNES games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"Sega Genesis Emulator",
+        "url":"segaMD.html",    
+        "description":"Our Sega Genesis games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"NDS Emulator",
+        "url":"nds.html",    
+        "description":"Our NDS games",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+        "name":"Uplaod ROM",
+        "url":"testlaunch.html",
+        "description":"Upload your own ROMs",
+        "icons": [{ "src": "pwa/manifest-icon-96.png", "sizes": "96x96" }]
+    }
+],
+"categories": [
+    "education",
+    "kids",
+    "lifestyle",
+    "productivity"
+]
+
+
+}
